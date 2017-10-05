@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :bookshelves
+  root to: "welcome#index"
   resources :books
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resource :orders
+
+  resources :orders, only: [:index, :new, :create]
 end

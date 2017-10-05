@@ -10,5 +10,14 @@
   <%= @user.money %>
 </p>
 
+
+<h2>Collection</h2>
+<ul>
+<% @user.books.each do |b| %>
+  <li><%= link_to b.title, b %></li>
+<% end %>
+</ul>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', User %>
