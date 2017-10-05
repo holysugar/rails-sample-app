@@ -6,4 +6,12 @@ class User < ApplicationRecord
     "#{id}-#{name}"
   end
 
+  def to_s
+    "[#{id}]#{name}"
+  end
+
+  def to_key
+    name
+  end
+
 end
